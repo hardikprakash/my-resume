@@ -1,0 +1,25 @@
+name: Validate Branch Naming
+
+on:
+  push:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check branch name
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+
+          if [[ "$BRANCH" == "main" ]]; then
+            exit 0
+          fi
+
+          if [[ ! "$BRANCH" =~ ^[a-z0-9]+_[a-z0-9_]+$ ]]; then
+            echo "❌ Invalid branch name: $BRANCH"
+            echo "Expected: {company}_{role} (lowercase)"
+            exit 1
+          fi
+
+          echo "✅ Branch name valid: $BRANCH"
