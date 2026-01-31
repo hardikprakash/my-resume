@@ -1,6 +1,7 @@
-name: Build PDF
+name: Build Resume PDF
 
-on: push
+on:
+  push:
 
 jobs:
   build:
@@ -14,17 +15,31 @@ jobs:
         uses: xu-cheng/latex-action@4.0.0
         with:
           root_file: resume.tex
-          cache: true
 
-      - name: Rename PDF
+      - name: Compute name
+        id: vars
         run: |
           SAFE_BRANCH="${GITHUB_REF_NAME//\//-}"
-          PDF_NAME="$SAFE_BRANCH-resume.pdf"
-          mv resume.pdf "$PDF_NAME"
-          echo "PDF_NAME=$PDF_NAME" >> "$GITHUB_ENV"
+          DATE_TAG="$(date +'%m_%Y')"
 
-      - name: Upload PDF artifact
+          echo "branch=$SAFE_BRANCH" >> $GITHUB_OUTPUT
+          echo "date=$DATE_TAG" >> $GITHUB_OUTPUT
+          echo "filename=$SAFE_BRANCH-$DATE_TAG-resume.pdf" >> $GITHUB_OUTPUT
+
+      - name: Rename PDF
+        run: mv resume.pdf "${{ steps.vars.outputs.filename }}"
+
+      - name: Upload artifact
         uses: actions/upload-artifact@v6.0.0
         with:
-          name: ${{ github.ref_name }} Resume PDF
-          path: ${{ env.PDF_NAME }}
+          name: ${{ steps.vars.outputs.branch }} Resume (${{ steps.vars.outputs.date }})
+          path: ${{ steps.vars.outputs.filename }}
+
+      - name: Create or update GitHub Release
+        uses: softprops/action-gh-release@v2.5.0
+        with:
+          tag_name: ${{ steps.vars.outputs.branch }}
+          name: Resume - ${{ steps.vars.outputs.branch }}
+          files: ${{ steps.vars.outputs.filename }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
