@@ -43,7 +43,7 @@ jobs:
         uses: softprops/action-gh-release@v2.5.0
         with:
           tag_name: ${{ steps.vars.outputs.branch }}
-          name: Resume - ${{ steps.vars.outputs.branch }}
+          name: resume - ${{ steps.vars.outputs.branch }}
           files: ${{ steps.vars.outputs.filename }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
