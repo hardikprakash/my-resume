@@ -1,105 +1,87 @@
 %----------HEADING-----------------
+
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{{\LARGE Hardik Prakash}} & Email: \href{mailto:hardikprakash.official@gmail.com}{hardikprakash.official@gmail.com}\\
     Portfolio: \href{https://hardikprakash.dev}{hardikprakash.dev} & GitHub: \href{https://github.com/hardikprakash}{github.com/hardikprakash} \\
     LinkedIn: \href{https://linkedin.com/in/hardik-prakash}{linkedin.com/in/hardik-prakash} & Mobile: +91-8130841139 \\
 \end{tabular*}
 
-%-----------EDUCATION-----------------
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Dr. A.P.J Abdul Kalam Technical University}{Lucknow, India}
-{B.Tech - Computer Science and Artificial Intelligence; GPA: 7.02}{Nov 2021 - July 2025}
-\resumeSubHeadingListEnd    
-
-%-----------SKILLS-----------------
-\section{Skills Summary}
-\resumeSubHeadingListStart
-\resumeSubItem{Languages}{Python, SQL, C, JavaScript, TypeScript}
-\resumeSubItem{Frameworks}{FastAPI, Flask, Streamlit, React}
-\resumeSubItem{Libraries \& Tools}{Scikit-learn, SpaCy, TensorFlow, Redis}
-\resumeSubItem{Platforms}{Docker, Git, Azure, PostgreSQL, ChromaDB}
-\resumeSubHeadingListEnd
-
 %-----------EXPERIENCE-----------------
+
 \section{Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
-{Mohap AI Solutions}{Sep 2025 – Feb 2026}
-{AI Developer Intern}{Remote}
+\resumeSubheading{Mohap AI Solutions}{Sep 2025 -- Present}{AI Engineer (Promoted from Intern, Apr 2026)}{Remote}
 \resumeItemListStart
-\resumeItem{Agentic Text-to-SQL Pipeline}
-{Engineered a RAG-based compliance assistant that maps user questions to pre-validated SAP SQL templates using vector similarity search. Enabled non-technical auditors to retrieve complex data without writing code.}
-\resumeItem{High-Concurrency Message Queue}
-{Designed a buffering and batching system for a WhatsApp chatbot to handle rapid-fire user inputs. Implemented window-based context concatenation to prevent race conditions and reduce LLM API calls.}
-\resumeItem{Session State Management}
-{Developed a Redis-backed service to track session lifecycles, implementing polling mechanisms to detect user inactivity or worker timeouts and trigger automated recovery workflows.}
+\resumeItem{Agentic AI Chatbot}{Designed and built an \textbf{agentic chatbot} end-to-end --- authored \textbf{tool definitions}, built \textbf{precomputation workflows} that surface structured data at runtime, and integrated them into \textbf{React agent loops} to answer user queries from live and precomputed context.}
+\resumeItem{Multi-Tenancy Migration}{Led \textbf{backend architecture} changes including migration from \textbf{single-tenant to multi-tenant} and implemented \textbf{context-aware recommendations} with prompt engineering and updated backend workflows.}
+\resumeItem{Agentic Text-to-SQL Pipeline}{Built a \textbf{RAG}-based compliance assistant mapping natural language questions to pre-validated \textbf{SAP SQL} templates via \textbf{vector similarity search}, enabling non-technical auditors to retrieve complex data without writing code.}
+\resumeItem{High-Concurrency Message Queue}{Designed a \textbf{buffering and batching layer} for a WhatsApp chatbot to handle rapid-fire inputs. Implemented window-based context concatenation to prevent race conditions and reduce redundant \textbf{LLM API} calls.}
+\resumeItem{Session State Management}{Developed a \textbf{Redis}-backed service tracking session lifecycles, inactivity detection, and automated recovery workflows.}
 \resumeItemListEnd
 
-\resumeSubheading
-{NeGD, Digital India Corporation, MeitY}{Feb 2025 – Apr 2025}
-{Data Analyst Intern}{Delhi, India}
+\resumeSubheading{NeGD, Digital India Corporation, MeitY}{Feb 2025 -- Apr 2025}{Data Analyst Intern}{Delhi, India}
 \resumeItemListStart
-\resumeItem{User Sentiment Analysis}
-{Analyzed 5,000+ reviews using TF-IDF and BERT embeddings to cluster key UX pain points.}
-\resumeItem{LLM-Driven Text Mining}
-{Reduced manual tagging by 60\% using a self-hosted LLM pipeline with NLTK and Scikit-learn.}
-\resumeItem{Time-Series Forecasting}
-{Built PROPHET models to forecast user growth across 8+ app categories to inform product strategy.}
+\resumeItem{User Sentiment Analysis}{Analyzed 5,000+ reviews using \textbf{TF-IDF} and \textbf{BERT} embeddings to cluster key UX pain points.}
+\resumeItem{LLM-Driven Text Mining}{Reduced manual tagging by 60\% using a \textbf{self-hosted LLM pipeline} with NLTK and Scikit-learn.}
+\resumeItem{Time-Series Forecasting}{Built \textbf{PROPHET} models to forecast user growth across 8+ app categories to inform product strategy.}
 \resumeItemListEnd
 
-\resumeSubheading
-{Futuresoft (INDIA) Pvt. Ltd.}{June 2024 – Jan 2025}
-{Software Engineer Intern}{Remote}
+\resumeSubheading{Futuresoft (INDIA) Pvt. Ltd.}{June 2024 -- Jan 2025}{Software Engineer Intern}{Remote}
 \resumeItemListStart
-\resumeItem{AI-Powered Surveillance}
-{Engineered a real-time system using YOLOv8 and FastAPI, reducing detection latency to under 2s.}
-\resumeItem{Power Forecasting Models}
-{Trained regression models to predict power consumption with 92\% accuracy, visualized via Seaborn.}
+\resumeItem{AI-Powered Surveillance}{Engineered a real-time system using \textbf{YOLOv8} and \textbf{FastAPI}, reducing detection latency to under 2s.}
+\resumeItem{Power Forecasting Models}{Trained regression models to predict power consumption with 92\% accuracy, visualized via Seaborn.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-
 
 %-----------PROJECTS-----------------
 
 \section{Projects}
 \resumeSubHeadingListStart
 
-\resumeSubItem{reProgram – Agentic Habit Enforcement Platform (In Development)}
-{Architecting a behavior-modification app where LLM agents track user accountability for short-term programs. Completed backend infrastructure including \textbf{JWT authentication}, \textbf{PostgreSQL} schema design, and \textbf{FastAPI} CRUD endpoints. Currently implementing the agentic feedback loop. \\
-    \textbf{Stack:} FastAPI, PostgreSQL, React}
+\resumeSubItem{Linux Kernel Patches}{Authored two patches currently under upstream review.}
 
-\resumeSubItem{Upskillr – LLM-Powered Career Skill Recommender}
-{Built an AI assistant that recommends personalized skills using a \textbf{RAG} pipeline. Extracted profile data using LLMs, retrieved job listings from \textbf{ChromaDB}, and generated upskilling suggestions. \\
+\resumeSubItem{Finance RAG Agent}{Agentic pipeline for Q\&A over \textbf{financial documents} (20-F filings). Ingestion pipeline separates tables and prose into distinct \textbf{vector entities}; at runtime, user questions are \textbf{decomposed into sub-queries} and retrieved across a multi-step \textbf{React agent loop}. \\
+    \textbf{Stack:} FastAPI, ChromaDB, LangChain, Python}
+
+\resumeSubItem{Upskillr -- LLM-Powered Career Skill Recommender}{Built an AI assistant that recommends personalized skills using a \textbf{RAG} pipeline. Extracted profile data using LLMs, retrieved job listings from \textbf{ChromaDB}, and generated upskilling suggestions. \\
     \textbf{Stack:} FastAPI, Streamlit, ChromaDB, Hugging Face, Azure VMs \\
-    \textbf{Links:} \MYhref{https://github.com/hardikprakash/upskillr}{GitHub}, 
+    \textbf{Links:} \MYhref{https://github.com/hardikprakash/upskillr}{GitHub},
     \MYhref{https://upskillr.streamlit.app}{Live Demo}}
 
-\resumeSubItem{End-to-End Topic Modeling Pipeline}
-{Developed a scalable NLP pipeline to uncover latent topics from unstructured text using \textbf{LDA} and \textbf{BERTopic}. Enabled interactive visualization on datasets with over 10,000 documents. \\
+\resumeSubItem{End-to-End Topic Modeling Pipeline}{Developed a scalable NLP pipeline to uncover latent topics from unstructured text using \textbf{LDA} and \textbf{BERTopic}. Enabled interactive visualization on datasets with over 10,000 documents. \\
     \textbf{Stack:} BERTopic, Gensim, Pandas, SpaCy, Streamlit \\
-    \textbf{Links:} \MYhref{https://github.com/hardikprakash/topic-modelling-pipeline}{GitHub}, 
+    \textbf{Links:} \MYhref{https://github.com/hardikprakash/topic-modelling-pipeline}{GitHub},
     \MYhref{https://topic-modelling-pipeline.streamlit.app}{Live Demo}}
 
-\resumeSubItem{Image Classification using CNNs}
-{Trained two \textbf{CNNs} on Intel's image dataset using \textbf{Keras Functional API}. Achieved 92\% validation accuracy with custom callbacks and EarlyStopping. \\
+\resumeSubItem{Image Classification using CNNs}{Trained two \textbf{CNNs} on Intel's image dataset using \textbf{Keras Functional API}. Achieved 92\% validation accuracy with custom callbacks and EarlyStopping. \\
     \textbf{Stack:} Keras, TensorFlow, NumPy \\
     \textbf{Links:} \MYhref{https://huggingface.co/hardikprakash/intel-image-classification-cnn}{Hugging Face}}
 
 \resumeSubHeadingListEnd
 
+%-----------SKILLS-----------------
+
+\section{Skills Summary}
+\resumeSubHeadingListStart
+\resumeSubItem{Languages}{Python, SQL, C, JavaScript, TypeScript}
+\resumeSubItem{Frameworks}{FastAPI, Flask, Streamlit, React}
+\resumeSubItem{Libraries \& Tools}{Scikit-learn, SpaCy, TensorFlow, LangChain, Redis}
+\resumeSubItem{Platforms}{Docker, Git, Azure, PostgreSQL, ChromaDB}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{Dr. A.P.J Abdul Kalam Technical University}{Lucknow, India}{B.Tech - Computer Science and Artificial Intelligence; GPA: 7.02}{Nov 2021 -- July 2025}
+\resumeSubHeadingListEnd
 
 %-----------CERTIFICATIONS-----------------
+
 \section{Certifications}
 \resumeSubHeadingListStart
-
-\resumeSubItem{Deep Learning Specialization}
-{Deeplearning.ai - Neural Networks, CNNs, Sequence Models, Hyperparameter Tuning}
-
-\resumeSubItem{Microsoft Certified}
-{Azure Fundamentals, Azure Data Fundamentals}
-
+\resumeSubItem{Deep Learning Specialization}{Deeplearning.ai - Neural Networks, CNNs, Sequence Models, Hyperparameter Tuning}
+\resumeSubItem{Microsoft Certified}{Azure Fundamentals, Azure Data Fundamentals}
 \resumeSubHeadingListEnd
